@@ -126,7 +126,7 @@ const QuestionsForm = () => {
         )}
       </div>
       <div className={s.questionSection}>
-        <p>Have you regularly used illicit drugs</p>
+        <p>Have you regularly used illicit drugs?</p>
         <FormControl sx={{ my: 1 }}>
           <RadioGroup
             row

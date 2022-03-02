@@ -9,9 +9,14 @@ import Summary from "./components/Summary/Summary";
 import s from "./PatientIntake.module.scss";
 import type { PatientIntakeFormState } from "./types";
 import { PatientIntakeSteps } from "./types";
-import { DemographicsSchema, initialFormState, QuestionsSchema } from "./utils";
+import {
+  DemographicsSchema,
+  initialFormState,
+  QuestionsSchema,
+  SummarySchema,
+} from "./utils";
 
-const PatientIntakeDataLayer = (): JSX.Element => {
+const PatientIntakeDataLayer = () => {
   const step =
     new URLSearchParams(useLocation().search).get("step") || undefined;
   const navigate = useNavigate();
@@ -34,10 +39,11 @@ const PatientIntakeDataLayer = (): JSX.Element => {
   const getSchemaForStep = useCallback(() => {
     switch (step) {
       case PatientIntakeSteps.CONDITIONS:
-      case PatientIntakeSteps.SUMMARY:
         return undefined;
       case PatientIntakeSteps.QUESTIONS:
         return QuestionsSchema;
+      case PatientIntakeSteps.SUMMARY:
+        return SummarySchema;
       case PatientIntakeSteps.DEMOGRAPHIC:
       default:
         return DemographicsSchema;

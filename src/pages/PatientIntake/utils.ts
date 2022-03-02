@@ -22,6 +22,7 @@ export const initialFormState: PatientIntakeFormState = {
     postalCode: "",
     street1: "",
   },
+  agreedToTerms: false,
 };
 
 //Utility Functions
@@ -96,4 +97,8 @@ export const QuestionsSchema = Yup.object().shape({
       is: true,
       then: Yup.string().oneOf(FrequencyArray).required("Required"),
     }),
+});
+
+export const SummarySchema = Yup.object().shape({
+  agreedToTerms: Yup.boolean().oneOf([true], "Must agree to terms."),
 });

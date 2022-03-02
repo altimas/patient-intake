@@ -40,6 +40,7 @@ export interface PatientIntakeFormState {
   medications?: string;
   allergies?: string;
   surgeriesAndHospitalStays?: string;
+  agreedToTerms: boolean;
 }
 
 export enum Conditions {

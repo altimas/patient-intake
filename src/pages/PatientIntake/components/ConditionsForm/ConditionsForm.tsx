@@ -16,6 +16,7 @@ const ConditionsForm = () => {
 
   return (
     <>
+      <p>Select all applicable conditions.</p>
       <ButtonGroup
         sx={{ my: 2 }}
         variant="contained"
