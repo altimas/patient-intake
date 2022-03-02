@@ -1,0 +1,23 @@
+.header {
+  margin: 16px 0;
+  align-self: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 24px;
+
+  p {
+    margin: 2px 0;
+  }
+}
+
+.editLink {
+  align-self: flex-end;
+  justify-content: flex-end;
+}
