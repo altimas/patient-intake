@@ -9,6 +9,9 @@ In this project I created a simple, React application, using typescript, formik,
 - Used Material-UI for a component library
 - Validates all required fields and options utilizing Formik's validation schema with Yup.
 
+Did a quick deploy to Netlify so you can see a hosted version of the built app here:
+[Patient Intake Site](https://admiring-lamarr-a21f27.netlify.app/)
+
 ### The App Gathers This Information
 
 - Demographic data: name, email, address, birthdate, etc
